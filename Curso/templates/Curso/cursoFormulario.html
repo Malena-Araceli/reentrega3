@@ -1,0 +1,15 @@
+{% extends 'Curso/padre.html' %}
+
+{% load static %}
+
+{% block title %} Formulario {% endblock title %}
+
+{% block main %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p><input type="text"name="curso">Nombre</p>
+        <p><input type="number" name="camada">Camada</p>
+        <input type="submit" value="Guardar">
+    
+    </form>
+{% endblock main %}
