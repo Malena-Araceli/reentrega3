@@ -1,8 +1,15 @@
-{% extends "Curso/padre.html" %}
+{% extends "Curso/base.html" %}
 {% load static %}
 
+{% block title %} Estudiantes {% endblock title %}
+{% block main %}
 
-{% block section2 %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+
 <!-- Content section 2-->
  <section>
     <div class="container px-5">
@@ -19,9 +26,7 @@
         </div>
     </div>
 </section>
-{% endblock %}
 
-{% block section3 %}
  <!-- Content section 3-->
  <section>
     <div class="container px-5">
@@ -48,4 +53,11 @@
 <script src="js/scripts.js"></script>
 </body>
 </html>
-{% endblock %}
+
+
+
+
+
+ 
+{% endblock main %}
+
